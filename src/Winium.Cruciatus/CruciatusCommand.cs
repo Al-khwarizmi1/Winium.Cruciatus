@@ -4,11 +4,12 @@
 
     using System;
     using System.Collections.Generic;
-    using System.Drawing;
     using System.Linq;
-    using System.Windows.Automation;
+    using System.Windows;
 
     using NLog;
+
+    using UIAComWrapper;
 
     using Winium.Cruciatus.Core;
     using Winium.Cruciatus.Elements;

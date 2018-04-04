@@ -3,7 +3,8 @@
     #region using
 
     using System.Collections.Generic;
-    using System.Windows.Automation;
+
+    using UIAComWrapper;
 
     #endregion
 

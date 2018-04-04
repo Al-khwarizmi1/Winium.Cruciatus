@@ -5,6 +5,8 @@
     using System.Text.RegularExpressions;
     using System.Windows.Automation;
 
+    using UIAComWrapper;
+
     #endregion
 
     internal static class AutomationPropertyHelper

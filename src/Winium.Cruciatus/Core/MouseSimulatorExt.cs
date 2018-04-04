@@ -3,9 +3,9 @@
     #region using
 
     using System.Diagnostics.CodeAnalysis;
-    using System.Drawing;
     using System.Threading;
     using System.Windows.Forms;
+    using System.Windows;
 
     using WindowsInput;
 
@@ -89,6 +89,11 @@
             this.Click(button);
         }
 
+        public void Click(MouseButton button, double x, double y)
+        {
+            this.Click(button, (int)x, (int)y);
+        }
+
         /// <summary>
         /// Эмулирует двойной клик в текущем положении курсора.
         /// </summary>
@@ -126,6 +131,11 @@
             this.DoubleClick(button);
         }
 
+        public void DoubleClick(MouseButton button, double x, double y)
+        {
+            this.DoubleClick(button, (int)x, (int)y);
+        }
+
         /// <summary>
         /// Эмулярует клик левой кнопки мыши в текущем положении курсора.
         /// </summary>
@@ -156,7 +166,7 @@
         public void MoveCursorPos(int x, int y)
         {
             var currentPoint = this.CurrentCursorPos;
-            this.SetCursorPos(currentPoint.X + x, currentPoint.Y + y);
+            this.SetCursorPos((int)(currentPoint.X + x), (int)(currentPoint.Y + y));
         }
 
         /// <summary>

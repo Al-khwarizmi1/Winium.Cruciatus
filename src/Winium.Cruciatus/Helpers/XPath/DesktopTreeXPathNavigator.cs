@@ -7,6 +7,8 @@
     using System.Xml;
     using System.Xml.XPath;
 
+    using UIAComWrapper;
+
     #endregion
 
     internal class DesktopTreeXPathNavigator : XPathNavigator

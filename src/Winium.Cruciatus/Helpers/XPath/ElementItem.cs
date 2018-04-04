@@ -8,6 +8,8 @@
     using System.Windows.Automation;
     using System.Xml.XPath;
 
+    using UIAComWrapper;
+
     using Winium.Cruciatus.Elements;
     using Winium.Cruciatus.Exceptions;
 

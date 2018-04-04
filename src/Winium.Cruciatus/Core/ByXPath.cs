@@ -6,6 +6,8 @@
     using System.Linq;
     using System.Windows.Automation;
 
+    using UIAComWrapper;
+
     using Winium.Cruciatus.Helpers;
 
     #endregion

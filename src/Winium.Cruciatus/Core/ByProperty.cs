@@ -5,6 +5,8 @@
     using System.Collections.Generic;
     using System.Windows.Automation;
 
+    using UIAComWrapper;
+
     using Winium.Cruciatus.Exceptions;
     using Winium.Cruciatus.Helpers;
 

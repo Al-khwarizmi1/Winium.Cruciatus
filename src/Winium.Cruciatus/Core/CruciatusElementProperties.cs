@@ -4,6 +4,9 @@
 
     using System.Drawing;
     using System.Windows.Automation;
+    using System.Windows.Media;
+
+    using UIAComWrapper;
 
     #endregion
 
@@ -32,7 +35,7 @@
         /// <summary>
         /// Свойство BoundingRectangle.
         /// </summary>
-        public Rectangle BoundingRectangle
+        public System.Windows.Rect BoundingRectangle
         {
             get
             {
@@ -43,13 +46,13 @@
         /// <summary>
         /// Свойство ClickablePoint. Внимание, значение может отсутствовать.
         /// </summary>
-        public Point? ClickablePoint
+        public System.Windows.Point? ClickablePoint
         {
             get
             {
-                Point point;
+              System.Windows.Point point;
                 var exists = this.element.TryGetClickablePoint(out point);
-                return exists ? point : new Point?();
+                return exists ? point : new System.Windows.Point?();
             }
         }
 

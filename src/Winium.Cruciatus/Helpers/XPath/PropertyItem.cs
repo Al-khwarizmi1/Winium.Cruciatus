@@ -2,8 +2,9 @@
 {
     #region using
 
-    using System.Windows.Automation;
     using System.Xml.XPath;
+
+    using UIAComWrapper;
 
     #endregion
 

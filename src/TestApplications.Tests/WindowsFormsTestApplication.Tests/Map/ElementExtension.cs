@@ -1,8 +1,8 @@
 ﻿namespace WindowsFormsTestApplication.Tests.Map
 {
+    using UIAComWrapper;
     #region using
 
-    using System.Windows.Automation;
 
     using Winium.Cruciatus.Core;
     using Winium.Cruciatus.Elements;

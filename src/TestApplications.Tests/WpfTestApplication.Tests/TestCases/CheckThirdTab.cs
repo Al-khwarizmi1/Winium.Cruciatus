@@ -21,6 +21,7 @@
 
         #region Public Methods and Operators
 
+        [Ignore]
         [Test]
         public void CheckingOpenFileDialog()
         {
@@ -34,6 +35,7 @@
         }
 
         [Test]
+        [Ignore]
         public void CheckingSaveFileDialog()
         {
             this.thirdTab.SaveFileDialogButton.Click();

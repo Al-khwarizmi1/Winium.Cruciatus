@@ -3,8 +3,10 @@
     #region using
 
     using System;
-    using System.Drawing;
     using System.Windows.Automation;
+    using System.Windows;
+
+    using UIAComWrapper;
 
     using Winium.Cruciatus.Exceptions;
     using Winium.Cruciatus.Helpers;
@@ -37,7 +39,7 @@
                     }
                 }
 
-                var rect = rectElement.GetPropertyValue<Rectangle>(AutomationElement.BoundingRectangleProperty);
+                var rect = rectElement.GetPropertyValue<Rect>(AutomationElement.BoundingRectangleProperty);
 
                 return point.X < rect.Left;
             }
@@ -60,7 +62,7 @@
                     }
                 }
 
-                var rect = rectElement.GetPropertyValue<Rectangle>(AutomationElement.BoundingRectangleProperty);
+                var rect = rectElement.GetPropertyValue<Rect>(AutomationElement.BoundingRectangleProperty);
 
                 return point.Y < rect.Top;
             }
@@ -86,7 +88,7 @@
                     }
                 }
 
-                var rect = rectElement.GetPropertyValue<Rectangle>(AutomationElement.BoundingRectangleProperty);
+                var rect = rectElement.GetPropertyValue<Rect>(AutomationElement.BoundingRectangleProperty);
 
                 if (scrollPattern == null || scrollPattern.Current.HorizontalScrollPercent < 0)
                 {
@@ -117,7 +119,7 @@
                     }
                 }
 
-                var rect = rectElement.GetPropertyValue<Rectangle>(AutomationElement.BoundingRectangleProperty);
+                var rect = rectElement.GetPropertyValue<Rect>(AutomationElement.BoundingRectangleProperty);
 
                 if (scrollPattern == null || scrollPattern.Current.HorizontalScrollPercent < 0)
                 {
@@ -147,7 +149,7 @@
                     }
                 }
 
-                var externalRect = externalElement.GetPropertyValue<Rectangle>(AutomationElement.BoundingRectangleProperty);
+                var externalRect = externalElement.GetPropertyValue<Rect>(AutomationElement.BoundingRectangleProperty);
 
                 return externalRect.Contains(point);
             }

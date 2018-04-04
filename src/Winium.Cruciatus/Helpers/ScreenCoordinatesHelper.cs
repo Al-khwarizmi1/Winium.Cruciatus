@@ -2,7 +2,6 @@
 {
     #region using
 
-    using System.Drawing;
     using System.Windows;
 
     #endregion

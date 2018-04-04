@@ -10,6 +10,8 @@
 
     using WindowsInput;
 
+    using UIAComWrapper;
+
     using Winium.Cruciatus.Core;
     using Winium.Cruciatus.Elements;
     using Winium.Cruciatus.Exceptions;

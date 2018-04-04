@@ -4,6 +4,8 @@
 
     using System.Windows.Automation;
 
+    using UIAComWrapper;
+
     using Winium.Cruciatus.Core;
     using Winium.Cruciatus.Extensions;
 

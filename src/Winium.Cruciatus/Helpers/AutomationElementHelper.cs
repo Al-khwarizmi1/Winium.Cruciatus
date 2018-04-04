@@ -9,9 +9,9 @@ namespace Winium.Cruciatus.Helpers
     using System.Windows.Automation;
     using System.Xml.XPath;
 
-    using Winium.Cruciatus.Helpers.XPath;
+    using UIAComWrapper;
 
-    using Condition = System.Windows.Automation.Condition;
+    using Winium.Cruciatus.Helpers.XPath;
 
     #endregion
 
@@ -20,9 +20,9 @@ namespace Winium.Cruciatus.Helpers
         #region Methods
 
         internal static IEnumerable<AutomationElement> FindAll(
-            AutomationElement parent, 
-            TreeScope scope, 
-            Condition condition, 
+            AutomationElement parent,
+            TreeScope scope,
+           UIAComWrapper.Condition condition,
             int timeout)
         {
             var dtn = DateTime.Now.AddMilliseconds(timeout);
@@ -67,15 +67,15 @@ namespace Winium.Cruciatus.Helpers
             return Enumerable.Empty<AutomationElement>();
         }
 
-        internal static AutomationElement FindFirst(AutomationElement parent, TreeScope scope, Condition condition)
+        internal static AutomationElement FindFirst(AutomationElement parent, TreeScope scope, UIAComWrapper.Condition condition)
         {
             return FindFirst(parent, scope, condition, CruciatusFactory.Settings.SearchTimeout);
         }
 
         internal static AutomationElement FindFirst(
-            AutomationElement parent, 
-            TreeScope scope, 
-            Condition condition, 
+            AutomationElement parent,
+            TreeScope scope,
+           UIAComWrapper.Condition condition,
             int timeout)
         {
             var dtn = DateTime.Now.AddMilliseconds(timeout);
@@ -93,12 +93,12 @@ namespace Winium.Cruciatus.Helpers
             return null;
         }
 
-        internal static bool TryGetBoundingRectangleCenter(AutomationElement element, out Point point)
+        internal static bool TryGetBoundingRectangleCenter(AutomationElement element, out System.Windows.Point point)
         {
             var rect = element.Current.BoundingRectangle;
             if (rect.IsEmpty)
             {
-                point = new Point();
+                point = new System.Windows.Point();
                 return false;
             }
 
@@ -107,7 +107,7 @@ namespace Winium.Cruciatus.Helpers
             return true;
         }
 
-        internal static bool TryGetClickablePoint(AutomationElement element, out Point point)
+        internal static bool TryGetClickablePoint(AutomationElement element, out System.Windows.Point point)
         {
             return element.TryGetClickablePoint(out point);
         }

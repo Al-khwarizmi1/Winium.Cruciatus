@@ -5,6 +5,8 @@
     using System.Windows.Automation;
     using System.Xml.XPath;
 
+    using UIAComWrapper;
+
     #endregion
 
     internal class RootItem : ElementItem
